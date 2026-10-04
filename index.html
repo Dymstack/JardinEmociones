@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>El jardín de las emociones</title>
+    <!-- Aquí llamamos a tu CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Aquí llamamos a la librería desde internet -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Aquí llamamos a tu JavaScript -->
+    <script defer src="game.js"></script>
+  </head>
+  <body>
+    <div class="body-capa"></div>
+    <div class="body-capa"></div>
+
+    <div id="app-container">
+      <h1>El jardín de las emociones</h1>
+
+      <div class="workspace">
+        <div class="columna-camara">
+          <div class="camera-box">
+            <video id="webcam" autoplay muted width="320" height="240"></video>
+            <canvas id="overlay"></canvas>
+            <div id="detection-status">Iniciando cámara...</div>
+          </div>
+
+          <div class="instrucciones">
+            <div class="cruz">
+              <div class="tecla arriba"><span>😮</span>Arriba</div>
+              <div class="tecla izquierda"><span>😢</span>Izquierda</div>
+              <div class="tecla centro"><span>😐</span>Estático</div>
+              <div class="tecla derecha"><span>😄</span>Derecha</div>
+              <div class="tecla abajo"><span>😠</span>Abajo</div>
+            </div>
+          </div>
+        </div> <!-- aquí se cierra columna-camara -->
+
+        <div class="game-wrapper">
+          <div class="fondo-capa"></div>
+          <div class="fondo-capa"></div>
+          <canvas id="gameCanvas"></canvas>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
